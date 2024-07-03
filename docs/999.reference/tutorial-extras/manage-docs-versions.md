@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-draft: true
+unlisted: true
 ---
 
 # Manage Docs Versions

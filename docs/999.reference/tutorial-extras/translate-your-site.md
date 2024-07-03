@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-draft: true
+unlisted: true
 ---
 
 # Translate your site
