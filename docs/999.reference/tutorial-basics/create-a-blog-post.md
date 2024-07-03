@@ -1,10 +1,13 @@
 ---
 sidebar_position: 3
+draft: true
 ---
 
 # Create a Blog Post
 
 Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+
+<span class="badge badge--primary">Primary</span>
 
 ## Create your first Post
 

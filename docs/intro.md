@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
+draft: true
+
 ---
 
-# Introduction
+# Getting Started
 
 This documentation site help you configure and understand all about SteelRacing custom AC Mods.
-
-## Getting Started
 
 Get started by navigating through the **left menu**.
 Choose a section you need to know more about and start learning to customize the mod as you want.

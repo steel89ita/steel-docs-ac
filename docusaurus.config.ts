@@ -9,7 +9,7 @@ const projectName = "steel-docs-ac"
 
 const config: Config = {
   title: "Steel AC",
-  tagline: "Dinosaurs are cool",
+  tagline: "Assetto Corsa Modding Tools made simple.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -62,13 +62,18 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     docs: {
       sidebar: {
         autoCollapseCategories: true,
       },
     },
     navbar: {
-      title: "My Site",
+      title: "SteelRacing AC",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
@@ -76,13 +81,13 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "docsSidebar",
           position: "left",
           label: "Docs",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/steel89ita/steel-docs-ac",
           label: "GitHub",
           position: "right",
         },

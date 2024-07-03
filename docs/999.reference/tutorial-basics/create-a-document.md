@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+draft: true
 ---
 
 # Create a Document
@@ -43,7 +44,7 @@ It is also possible to create your sidebar explicitly in `sidebars.js`:
 
 ```js title="sidebars.js"
 export default {
-  tutorialSidebar: [
+  docsSidebar: [
     'intro',
     // highlight-next-line
     'hello',
