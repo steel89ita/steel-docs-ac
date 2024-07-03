@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 ---
+import ReactPlayer from 'react-player'
+import upAndDownURL from './video/video.mp4';
 
 # Themes
 
@@ -8,9 +10,11 @@ This documentation site help you configure and understand all about SteelRacing 
 
 ## Getting Started
 
-Get started by navigating through the **left menu**.
-Choose a section you need to know more about and start learning to customize the mod as you want.
 
+<ReactPlayer playing controls mute loop url={upAndDownURL} width='100%'
+            height='100%' />
+
+[text](video/themes_example.mkv)
 
 ### What you'll need
 

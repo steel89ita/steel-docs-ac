@@ -13,9 +13,9 @@ Choose a section you need to know more about and start learning to customize the
 
 ### What you'll need
 
-- [Assetto Corsa](https://nodejs.org/en/download/) - Version # or above (**Required**)
-- [CSP](https://acstuff.ru) - Custom Shaders Patch (**Required**)
-- [CM](https://acstuff.ru) - Content Manager
+- [Assetto Corsa](https://store.steampowered.com/app/244210/Assetto_Corsa/) - v.1.16 or above (**Required**)
+- [CSP - Custom Shaders Patch](https://acstuff.ru/patch/) - v.0.1.79 or above (**Required**)
+- [CM - Content Manager](https://acstuff.ru/app/) - v.0.8.2663.39678 or above
 
 :::warning
 
@@ -24,48 +24,28 @@ It lets you configure your tracks, cars and racing sessions in a comfortable UI.
 
 :::
 
-## CSP - Custom Shaders Patch
+## CSP - Custom Shaders Patch <span class="badge badge--primary">Required</span>
 
-Generate a new Docusaurus site using the **classic template**.
+CSP is an extension for Assetto Corsa which started as an attempt to add some sort dynamic lighting, hence the name.
+It's use evolved much, not only to give better graphics to the game, but also by adding new features to tracks and cars, 
+like RainFX, WeatherFX, animated displays, car and track scripts, VR Mode and many more.
 
-The classic template will automatically be added to your project after you run the command:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+#### Download it here: [https://acstuff.ru/patch/](https://acstuff.ru/patch/)
 
-```jsx title="/src/components/HelloCodeTitle.js"
-function HelloCodeTitle(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-```
+### Which version to choose?
 
-:::danger
+Normally, the **latest version is the better**.\
+If you have any issues, try to use the latest <span class="text--success">recommended version.</span>
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+:::info
+
+The free version of CSP it's not shipped with RainFX and other features as of now.
+If you want them, you need to buy the latest test version from Patreon.
 
 :::
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## CM - Content Manager <span class="badge badge--warning">Suggested</span>
 
 
-## Social Links
 
-**[docusaurus.new](https://docusaurus.new)**.
