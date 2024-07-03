@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Introduction
+# Themes
 
 This documentation site help you configure and understand all about SteelRacing custom AC Mods.
 
