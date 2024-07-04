@@ -1,0 +1,58 @@
+---
+sidebar_label: Showroom 09 - The Stage
+---
+import StCodeBlock from '@site/src/components/utilities/StCodeBlock'
+import ColorPalette from '@site/src/components/utilities/ColorPalette'
+import ExtAvailableColors from '!!raw-loader!@site/src/configs/available_colors.ini';
+import ExtObjectsControl from '!!raw-loader!@site/src/configs/st_09_ext_objects.ini';
+import ExtLightsControl from '!!raw-loader!@site/src/configs/st_09_ext_lights.ini';
+
+# Showroom 09: The Stage
+
+## Show / Hide Objects
+
+:::warning
+
+After changing these values, you need to **restart your game**.
+
+:::
+
+<StCodeBlock title={'ext_config.ini'} language={'ini'} >
+    {ExtObjectsControl}
+</StCodeBlock>
+
+**Water ( $ON | $OFF )** - Animated Water Surface
+
+**CameraSet ( $ON | $OFF )** - Camera Set with lights
+
+**Christmas ( $ON | $OFF )** - Christmas presents
+
+**TopLight ( $ON | $OFF )** - Top Light (Available in Layout #1 only)
+
+
+## Change Light Colors and Properties
+
+<StCodeBlock title={'ext_config.ini'} language={'ini'} >
+    {ExtLightsControl}
+</StCodeBlock>
+
+
+## Available Colors
+
+<StCodeBlock title={'ext_config.ini'} language={'ini'} >
+
+ ```ini
+ [DEFAULTS]
+DESCRIPTION = Color Values, don't change - Use them below for light colors
+ 
+ # DONT' CHANGE THESE VALUES! USE THEM BELOW
+ ```
+
+    {ExtAvailableColors}
+</StCodeBlock>
+
+<ColorPalette rawColors={ExtAvailableColors} ></ColorPalette>
+
+
+
+
