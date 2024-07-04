@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 ---
-import ReactPlayer from 'react-player'
-import upAndDownURL from './video/video.mp4';
+import VideoPlayer from '@site/src/components/utilities/VideoPlayer'
+import videoThemeSelection from './video/themes_selection.mp4';
 
 # Themes
 
@@ -11,10 +11,7 @@ This documentation site help you configure and understand all about SteelRacing 
 ## Getting Started
 
 
-<ReactPlayer playing controls mute loop url={upAndDownURL} width='100%'
-            height='100%' />
-
-[text](video/themes_example.mkv)
+<VideoPlayer url={videoThemeSelection} />
 
 ### What you'll need
 
