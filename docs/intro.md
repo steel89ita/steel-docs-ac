@@ -1,9 +1,8 @@
 ---
 sidebar_position: 1
-
 ---
 
-# Getting Started
+# Getting Started 
 
 This documentation site help you configure and understand all about SteelRacing custom AC Mods.
 
@@ -16,13 +15,6 @@ Choose a section you need to know more about and start learning to customize the
 - [Assetto Corsa](https://store.steampowered.com/app/244210/Assetto_Corsa/) - v.1.16 or above (**Required**)
 - [CSP - Custom Shaders Patch](https://acstuff.ru/patch/) - v.0.1.79 or above (**Required**)
 - [CM - Content Manager](https://acstuff.ru/app/) - v.0.8.2663.39678 or above
-
-:::warning
-
-Although **CM (Content Manager)** is not effectively required, is still _highly suggested_.
-It lets you configure your tracks, cars and racing sessions in a comfortable UI.
-
-:::
 
 ## CSP - Custom Shaders Patch <span class="badge badge--primary">Required</span>
 
@@ -46,6 +38,13 @@ If you want them, you need to buy the latest test version from Patreon.
 :::
 
 ## CM - Content Manager <span class="badge badge--warning">Suggested</span>
+
+:::warning
+
+Although **CM (Content Manager)** is not effectively required, is still _highly suggested_.
+It lets you configure your tracks, cars and racing sessions in a comfortable UI.
+
+:::
 
 
 
