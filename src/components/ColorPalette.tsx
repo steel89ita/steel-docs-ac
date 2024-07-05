@@ -18,21 +18,23 @@ export default function ColorPalette({ colors, rawColors }) {
     }
 
         return (
-            <>
-                {colorArray.map(e =>
-                    <p
-                        style={{
-                        backgroundColor: e.hex,
-                        borderRadius: '20px',
-                        color: '#fff',
-                            padding: '10px',
-                        boxShadow: '0px 2px 10px #20000022'
-                        }}>
-                        <span className="text--bold">{e.name}</span> - {e.hex}
-                        </p>
-                    
-                )}
-            </>
+          <>
+            {colorArray.map((e) => (
+              <div
+                style={{
+                  backgroundColor: e.hex,
+                  borderRadius: "20px",
+                  color: "#fff",
+                  padding: "10px",
+                        margin: "2px",
+                  boxSizing: "content-box",
+                  boxShadow: "0px 2px 10px #20000022",
+                }}
+              >
+                <span className='text--bold'>{e.name}</span> - {e.hex}
+              </div>
+            ))}
+          </>
         )
     
 }
