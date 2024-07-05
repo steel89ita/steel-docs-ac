@@ -10,7 +10,7 @@ const projectName = "steel-docs-ac"
 const config: Config = {
   title: "Steel AC",
   tagline: "Assetto Corsa Modding Tools made simple.",
-  favicon: "img/favicon.ico",
+  favicon: "img/steeldocs_logo.png",
 
   // Set the production url of your site here
   url: `https://${organizationName}.github.io`,
@@ -75,8 +75,8 @@ const config: Config = {
     navbar: {
       title: "SteelRacing AC",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "SteelRacing Documentations",
+        src: "img/steeldocs_logo.png",
       },
       items: [
         {
@@ -90,6 +90,7 @@ const config: Config = {
           href: "https://github.com/steel89ita/steel-docs-ac",
           label: "GitHub",
           position: "right",
+          className: "header-github-link"
         },
       ],
     },
@@ -109,16 +110,16 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/HNC7HMqndH",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "Instagram",
+              href: "https://www.instagram.com/steel.simracing",
+            },
+            {
+              label: "Facebook",
+              href: "https://www.facebook.com/steel.simracing",
             },
           ],
         },
@@ -130,8 +131,8 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "Patreon",
+              href: "https://www.patreon.com/steelracing",
             },
           ],
         },
