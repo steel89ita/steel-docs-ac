@@ -1,0 +1,32 @@
+---
+sidebar_label: Color Palette
+---
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import ColorPalette from '@site/src/components/ColorPalette'
+import ExtAvailableColors from '!!raw-loader!@site/src/configs/available_colors.ini';
+
+# Color Palette
+
+Each showroom contains the available color palette in the first section of the **ext_config.ini**  file. To use any of these colors for you lights, simply write their name with a **$ sign in front**.
+
+
+$White ---> $Purple
+<StCodeBlock title={'ext_config.ini'} language={'ini'} >
+
+ ```ini title="ext_config.ini"
+ [DEFAULTS]
+DESCRIPTION = Color Values, don't change - Use them below for light colors
+ 
+ # DONT' CHANGE THESE VALUES! USE THEM BELOW
+ ```
+
+    {ExtAvailableColors}
+</StCodeBlock>
+
+<ColorPalette rawColors={ExtAvailableColors} ></ColorPalette>
+
+
+
+
+
+
