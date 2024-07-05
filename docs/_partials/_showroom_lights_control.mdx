@@ -1,0 +1,15 @@
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+
+## Change Light Colors and Properties
+
+<StCodeBlock title={'ext_config.ini'} language={'ini'} >
+    {props.iniContent}
+</StCodeBlock>
+
+#### Accepted properties and values 
+
+These are the available configurations with the accepted values.\
+Remember to strictly respect the name and values like shown below.
+
+<PropsTable rows={props.properties} />

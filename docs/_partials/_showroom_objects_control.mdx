@@ -1,0 +1,19 @@
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+
+## Show / Hide Objects
+
+:::warning
+After changing these values, you need to **restart your game**.
+:::
+
+<StCodeBlock title={'ext_config.ini'} language={'ini'} >
+    {props.iniContent}
+</StCodeBlock>
+
+#### Accepted properties and values 
+
+These are the available configurations with the accepted values.\
+Remember to strictly respect the name and values like shown below.
+
+<PropsTable rows={props.properties} />
