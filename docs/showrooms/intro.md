@@ -4,69 +4,25 @@ sidebar_position: 1
 
 # Introduction
 
-This documentation site help you configure and understand all about SteelRacing custom AC Mods.
-
-## Getting Started
-
-Get started by navigating through the **left menu**.
-Choose a section you need to know more about and start learning to customize the mod as you want.
-
-
-### What you'll need
-
-- [Assetto Corsa](https://nodejs.org/en/download/) - Version # or above (**Required**)
-- [CSP](https://acstuff.ru) - Custom Shaders Patch (**Required**)
-- [CM](https://acstuff.ru) - Content Manager
+Each showroom is fully customizable, allowing you to extend and personalize your settings to create truly **unique photo shots**. Transform your car displays with our versatile showrooms, designed to provide endless creative possibilities for every photographer and car enthusiast. 📸
 
 :::warning
+When customizing your showroom, you will be editing configuration files in .ini and .json formats. While the process is straightforward, it's crucial to follow exact conventions.
 
-Although **CM (Content Manager)** is not effectively required, is still _highly suggested_.
-It lets you configure your tracks, cars and racing sessions in a comfortable UI.
-
+<mark>Ensure every character, such as quotes (") and variables ($), is precisely checked to avoid errors.</mark> Attention to detail is essential for successful customization. 
 :::
 
-## CSP - Custom Shaders Patch
+:::success
+### Having problems with your edits?
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-```jsx title="/src/components/HelloCodeTitle.js"
-function HelloCodeTitle(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-```
-
-:::danger
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
+Don't worry. Just delete the track folder and re-install your mod. 👍
 :::
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Configuration files location
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+The starting point for every Steel Showroom customization is the **extension** folder, that is located in the **track** folder of the showroom.
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+For example:
 ```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
-
-
-## Social Links
-
-**[docusaurus.new](https://docusaurus.new)**.
+...\steamapps\common\assettocorsa\content\tracks\st_showroom09\extension
+```
