@@ -4,69 +4,10 @@ sidebar_position: 1
 
 # Introduction
 
-This documentation site help you configure and understand all about SteelRacing custom AC Mods.
+Introducing Steel Studio, the ultimate extension for your showroom customizations in Assetto Corsa. With Steel Studio, you can effortlessly change themes and alter the showroom palette to suit your style. Adjust the colors of scene materials, teleport your car to new locations, and customize object visibility to create the perfect setting for your photo shots.
 
-## Getting Started
-
-Get started by navigating through the **left menu**.
-Choose a section you need to know more about and start learning to customize the mod as you want.
-
-
-### What you'll need
-
-- [Assetto Corsa](https://nodejs.org/en/download/) - Version # or above (**Required**)
-- [CSP](https://acstuff.ru) - Custom Shaders Patch (**Required**)
-- [CM](https://acstuff.ru) - Content Manager
+Steel Studio takes your customization experience to the next level, offering intuitive tools and features that give you complete control over your showroom environment. Whether you want to tweak the lighting, modify the backdrop, or highlight specific elements, Steel Studio provides the flexibility and precision needed to bring your vision to life.
 
 :::warning
-
-Although **CM (Content Manager)** is not effectively required, is still _highly suggested_.
-It lets you configure your tracks, cars and racing sessions in a comfortable UI.
-
+**This section is a Work In Progress and will be updated soon. Come check again to know more about Steel Studio!**
 :::
-
-## CSP - Custom Shaders Patch
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-```jsx title="/src/components/HelloCodeTitle.js"
-function HelloCodeTitle(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-```
-
-:::danger
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
-
-
-## Social Links
-
-**[docusaurus.new](https://docusaurus.new)**.
