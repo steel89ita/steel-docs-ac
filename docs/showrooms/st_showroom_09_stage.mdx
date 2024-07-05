@@ -9,16 +9,19 @@ import PropsTable from '@site/src/components/PropsTable'
 {/* Ext Config INI parts */}
 import ExtObjectsControl from '!!raw-loader!@site/src/configs/st_09_ext_objects.ini';
 import ExtLightsControl from '!!raw-loader!@site/src/configs/st_09_ext_lights.ini';
+import VideoConfig from '!!raw-loader!@site/src/configs/st_09_config.json';
 
 {/* Documentation Partials */}
 import ShowroomObjects from '../_partials/_showroom_objects_control.mdx';
 import ShowroomLights from '../_partials/_showroom_lights_control.mdx';
+import WarningCodeCheck from '../_partials/_warning_code_check.mdx';
+import EditGameRunning from '../_partials/_success_edit_game_running.mdx';
 
 export const objectProperties = [
-    { name: 'Water', desc: 'Animated Water Surface', vals: '$ON - $OFF' },
-    { name: 'CameraSet', desc: 'Camera Set with lights', vals: '$ON - $OFF' },
-    { name: 'Christmas', desc: 'Christmas presents', vals: '$ON - $OFF' },
-    { name: 'TopLight', desc: 'Top Light (Available in Layout #1 only)', vals: '$ON - $OFF' },
+    { name: 'Water', desc: 'Animated Water Surface', vals: '$ON | $OFF' },
+    { name: 'CameraSet', desc: 'Camera Set with lights', vals: '$ON | $OFF' },
+    { name: 'Christmas', desc: 'Christmas presents', vals: '$ON | $OFF' },
+    { name: 'TopLight', desc: 'Top Light (Available in Layout #1 only)', vals: '$ON | $OFF' },
 ]
 
 export const lightProperties = [
@@ -29,18 +32,38 @@ export const lightProperties = [
     { name: 'Condition', desc: 'When the light is ON', vals: 'OFF | ALWAYS_ON | NIGHT_SMOOTH | FLARE_FLICKERING | STROBE' }
 ]
 
-# Showroom 09: The Stage
+export const videoConfigProperties = [
+    { name: 'file', desc: 'Folder and filename', vals: '"any of your videos*"' },
+    { name: 'mute', desc: 'Mute audio', vals: 'true | false' },
+    { name: 'speed', desc: 'Speed of the video', vals: 'from 0.0 to ~' },
+    { name: 'ratio', desc: 'Cropping of the video', vals: '"Stretch" | "Fit" | "Fill"' }
+]
 
-This showroom lets you play a dynamic animated video in the scene displays.
+# Showroom 09: The Stage
 
 ## Change Video
 
-<StCodeBlock title="config.json" language="json"> </StCodeBlock>
+
+This showroom lets you play a dynamic animated video in the scene displays.\
+You can use the default or any of your videos.
+
+1. If you want to use any of your videos, copy it to the **extension/videos** folder.
+2. Edit the file **extension/config.json**. Possible values below.
+
+<WarningCodeCheck />
+
+<EditGameRunning />
+
+<StCodeBlock title="extension/config.json" language="json">{VideoConfig} </StCodeBlock>
+
+<PropsTable rows={videoConfigProperties} />
 
 <ShowroomObjects iniContent={ExtObjectsControl} properties={objectProperties} />
 ___
 
 <ShowroomLights iniContent={ExtLightsControl} properties={lightProperties} />
+
+
 
 
 

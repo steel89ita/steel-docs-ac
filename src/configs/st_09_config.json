@@ -1,0 +1,7 @@
+{
+	"file": "videos/video1.mp4",
+	"mute": false,
+	"speed": 1.0,
+	"ratio": "Stretch",
+	"ratio_description": "Possible values are: Stretch, Fit, Fill"
+}
