@@ -10,36 +10,27 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: "Easy to Use",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    description: <>This documentation site is designed to make customizing your showroom and capturing the best shots effortless. Whether you're new to photography or an experienced photographer, the intuitive interface ensures that you can navigate and use the features with ease.</>,
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: "Focus on What Matters",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    description: <>With easy-to-use tools, changing light colors, adjusting lighting conditions, and modifying range is a breeze. You can also customize object visibility to create the perfect scene for your photos.</>,
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "SteelRacing's Essence",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The documentation provides everything you need to make the most of your showroom.
+        It caters to all skill levels, offering valuable insights and advanced techniques to help you create stunning,
+        unique photo shots effortlessly.
       </>
-    ),
+    )
   },
-];
+]
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
