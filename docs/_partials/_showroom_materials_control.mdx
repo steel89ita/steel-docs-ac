@@ -1,0 +1,18 @@
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+import EditGameRunning from '../_partials/_success_edit_game_running.mdx';
+
+## Material Properties
+
+<EditGameRunning />
+
+<StCodeBlock title={'extension/ext_config.ini'} language={'ini'} >
+    {props.iniContent}
+</StCodeBlock>
+
+#### Accepted properties and values 
+
+These are the available configurations with the accepted values.\
+Remember to strictly respect the name and values like shown below.
+
+<PropsTable rows={props.properties} />
