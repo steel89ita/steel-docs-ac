@@ -174,6 +174,21 @@ const config: Config = {
           line: "color-block-5",
           block: { start: "color-block-5-start", end: "color-block-5-end" },
         },
+        {
+          className: "code-block-color-6",
+          line: "color-block-6",
+          block: { start: "color-block-6-start", end: "color-block-6-end" },
+        },
+        {
+          className: "code-block-color-7",
+          line: "color-block-7",
+          block: { start: "color-block-7-start", end: "color-block-7-end" },
+        },
+        {
+          className: "code-block-color-8",
+          line: "color-block-8",
+          block: { start: "color-block-8-start", end: "color-block-8-end" },
+        },
       ],
     },
   } satisfies Preset.ThemeConfig,
