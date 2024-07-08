@@ -1,0 +1,31 @@
+---
+title: Showroom 06 - Abandoned Warehouse
+description: Abandoned Warehouse Showroom
+tags: ['showroom']
+---
+
+{/* Ext Config INI parts */}
+import ExtLightsControl from '!!raw-loader!@site/src/configs/st_06_ext_lights.ini';
+
+{/* Documentation Partials */}
+import ShowroomLights from '../_partials/_showroom_lights_control.mdx';
+
+export const lightProperties = [
+    { name: 'Color', desc: 'Color of the light', vals: 'Any from the Palette' },
+    { name: 'LightIntensity', desc: 'Brightness of the light', vals: 'from 0.0 to 1.0' },
+    { name: 'Condition', desc: 'When the light is ON', vals: 'OFF | ALWAYS_ON | NIGHT_SMOOTH | FLARE_FLICKERING | STROBE' }
+]
+
+# Showroom 06: Abandoned Warehouse
+
+<ShowroomLights iniContent={ExtLightsControl} properties={lightProperties} />
+
+
+
+
+
+
+
+
+
+
