@@ -1,0 +1,45 @@
+---
+title: Showroom 13 - Pale 🪙
+description: Pale Showroom
+tags: ['showroom', 'steel studio compatible']
+---
+
+{/* Ext Config INI parts */}
+import ExtMaterialControl from '!!raw-loader!@site/src/configs/st_13_ext_material.ini';
+import ExtLightsControl from '!!raw-loader!@site/src/configs/st_13_ext_lights.ini';
+
+{/* Documentation Partials */}
+import ShowroomMaterials from '../_partials/_showroom_materials_control.mdx';
+import ShowroomLights from '../_partials/_showroom_lights_control.mdx';
+
+export const materialProperties = [
+    { name: 'ObjectsSpecular', desc: 'Specular of the objects', vals: 'from 0 to ~' },
+    { name: 'ObjectsReflection', desc: 'Reflectiveness of the objects', vals: 'from 0 to ~' },
+    { name: 'FloorSpecular', desc: 'Specular of Floor', vals: 'from 0 to ~' },
+    { name: 'FloorReflection', desc: 'Reflectiveness of the Floor', vals: 'from 0 to ~' }
+]
+
+export const lightProperties = [
+    { name: 'Color', desc: 'Color of the light', vals: 'Any from the Palette' },
+    { name: 'LightIntensity', desc: 'Brightness of the light', vals: 'from 0.0 to 1.0' },
+    { name: 'MaterialIntensity', desc: 'Emissive of the material', vals: 'from 0.0 to 1.0' },
+    { name: 'Condition', desc: 'When the light is ON', vals: 'OFF | ALWAYS_ON | NIGHT_SMOOTH | FLARE_FLICKERING | STROBE' }
+]
+
+# Showroom 13: Pale
+
+
+<ShowroomMaterials iniContent={ExtMaterialControl} properties={materialProperties} />
+___
+
+<ShowroomLights iniContent={ExtLightsControl} properties={lightProperties} />
+
+
+
+
+
+
+
+
+
+
