@@ -1,6 +1,9 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+SteelRacing Assetto Corsa documentation for Showroom and Modding Tools.
+
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator,
+and deployed to [Github Pages](https://steel89ita.github.io/steel-docs-ac/).
 
 ### Installation
 
@@ -26,16 +29,11 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Using SSH:
+Website is deployed automatically using Github Actions when the `main` branch have new commits.
 
-```
-$ USE_SSH=true yarn deploy
-```
 
-Not using SSH:
+### License
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This project is licensed under the GNU GPL v3 License and readable in the LICENSE.txt file.
+The GNU GPLv3 lets people do almost anything they want with your project, except distributing closed source versions.
+Sharing improvements and help with the project is always appreciated ❤️
