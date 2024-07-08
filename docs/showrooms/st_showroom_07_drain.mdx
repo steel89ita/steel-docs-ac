@@ -1,0 +1,33 @@
+---
+title: Showroom 07 - The Drain 🪙
+description: The Drain Showroom
+tags: ['showroom']
+---
+
+{/* Ext Config INI parts */}
+import ExtLightsControl from '!!raw-loader!@site/src/configs/st_07_ext_lights.ini';
+
+{/* Documentation Partials */}
+import ShowroomLights from '../_partials/_showroom_lights_control.mdx';
+
+export const lightProperties = [
+    { name: 'Color', desc: 'Color of the light', vals: 'Any from the Palette' },
+    { name: 'LightIntensity', desc: 'Brightness of the light', vals: 'from 0.0 to 1.0' },
+    { name: 'MaterialIntensity', desc: 'Emissive of the material', vals: 'from 0.0 to 1.0' },
+    { name: 'Range', desc: 'Range of the light', vals: 'from 0.0 to ~' },
+    { name: 'Condition', desc: 'When the light is ON', vals: 'OFF | ALWAYS_ON | NIGHT_SMOOTH | FLARE_FLICKERING | STROBE | GRADIENT' }
+]
+
+# Showroom 07: The Drain
+
+<ShowroomLights iniContent={ExtLightsControl} properties={lightProperties} />
+
+
+
+
+
+
+
+
+
+
