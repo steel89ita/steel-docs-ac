@@ -61,7 +61,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/docs-social-card.jpg",
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -90,7 +90,7 @@ const config: Config = {
           href: "https://github.com/steel89ita/steel-docs-ac",
           label: "GitHub",
           position: "right",
-          className: "header-github-link"
+          className: "header-github-link",
         },
       ],
     },
@@ -137,7 +137,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `${new Date().getFullYear()} SteelRacing under GNU license. Built with ❤️ with Docusaurus.`,
+      copyright: `${new Date().getFullYear()} SteelRacing under <a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GNU license.</a> Built with ❤️ with Docusaurus and React.`,
     },
     prism: {
       theme: prismThemes.github,
