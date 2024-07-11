@@ -1,0 +1,52 @@
+---
+title: Objects Config
+description: Configuration of the Objects file
+sidebar_position: 3
+---
+
+{/* Ext Config INI parts */}
+import ObjectsTemplate from '!!raw-loader!@site/src/configs/steelstudio/objects.json';
+
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+
+export const objectsProperties = [
+    { name: 'meshNames', desc: 'String Array of the meshes to control visibility', vals: 'Array of String' },
+    { name: 'name', desc: 'Label of the objects seen in the app', vals: 'String' },
+    { name: 'enabled', desc: 'Default visibility', vals: 'true | false' }
+]
+
+export const backgroundsProperties = [
+    { name: 'color', desc: 'RGBA colors, comma separated', vals: '0-1, 0-1, 0-1, 0-1' },
+    { name: 'texture', desc: 'Texture type (role) to replace', vals: 'String ( txDiffuse | txDetail | ... )' },
+    { name: 'meshNames', desc: 'Array containing one or more meshes with the material to replace the texture', vals: 'Array of Strings' },
+    { name: 'label', desc: 'Name of the palette shown in Steel Studio', vals: 'String' },
+]
+
+# Locations Config
+
+
+:::warning
+When you **Save Objects** from the Steel Studio app, this file is saved so that the next time the visibility is kept.
+:::
+
+:::info
+You can specify Mesh names like in CSP configs with **? (question mark)** to select more objects with similar name
+:::
+
+
+### Config file properties
+
+<StCodeBlock title={'extension/steelstudio/objects.json'} language={'json'} >
+    {ObjectsTemplate}
+</StCodeBlock>
+
+<PropsTable rows={objectsProperties} />
+
+
+
+
+
+
+
+

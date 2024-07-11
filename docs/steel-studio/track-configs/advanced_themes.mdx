@@ -1,0 +1,65 @@
+---
+title: Theme Config
+description: Configuration of the Theme file
+sidebar_position: 1
+---
+
+{/* Ext Config INI parts */}
+import ThemesTemplate from '!!raw-loader!@site/src/configs/steelstudio/theme_00_default.json';
+import ExtLightsControl from '!!raw-loader!@site/src/configs/st_02_ext_lights.ini';
+
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+
+export const themeProperties = [
+    { name: 'theme', desc: 'Theme name seen in the Theme selection button', vals: 'String' },
+    { name: 'backgrounds', desc: 'Array containing the color palettes', vals: 'Array' }
+]
+
+export const backgroundsProperties = [
+    { name: 'color', desc: 'RGBA colors, comma separated', vals: '0-1, 0-1, 0-1, 0-1' },
+    { name: 'texture', desc: 'Texture type (role) to replace', vals: 'String ( txDiffuse | txDetail | ... )' },
+    { name: 'meshNames', desc: 'Array containing one or more meshes with the material to replace the texture', vals: 'Array of String' },
+    { name: 'label', desc: 'Name of the palette shown in Steel Studio', vals: 'String' },
+]
+
+# Theme Config
+
+
+### How to create this config
+
+1. Copy this config file from the template and paste it in ```[track_folder]/extension/steelstudio```
+1. In the CSP Objects Inspector app, **Select a mesh** and **copy it's name**.
+2. Look at the **Textures tab** and choose the Texture type you want to override 
+    - for simple meshes, it's normally txDiffuse
+    - for more complex ones, you might want to select txDetail
+3. **Edit** the first object by replacing the content in meshNames and texture.
+4. **Save** the file. Reopen Steel Studio, **select the theme** then try to change the palette.
+
+:::info
+Actually, you need to specify the mesh that has the material you need to change the texture.\
+**For example,** you can specify two meshes that have different materials to change the color on both materials.
+:::
+
+### Config file properties
+
+<StCodeBlock title={'extension/steelstudio/theme_00_default.json'} language={'json'} >
+    {ThemesTemplate}
+</StCodeBlock>
+
+
+
+
+<PropsTable rows={themeProperties} />
+
+### Backgrounds Array properties
+
+<PropsTable rows={backgroundsProperties} />
+
+
+
+
+
+
+
+

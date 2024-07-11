@@ -9,5 +9,11 @@ Introducing Steel Studio, the ultimate extension for your showroom customization
 Steel Studio takes your customization experience to the next level, offering intuitive tools and features that give you complete control over your showroom environment. Whether you want to tweak the lighting, modify the backdrop, or highlight specific elements, Steel Studio provides the flexibility and precision needed to bring your vision to life.
 
 :::warning
-**This section is a Work In Progress and will be updated soon. Come check again to know more about Steel Studio!**
+**Steel Studio is Work In Progress and will be updated soon. Come check again to know more about Steel Studio!**
 :::
+
+
+
+### Links
+
+- [SteelStudio Github Page](https://github.com/steel89ita/ac_steel_studio)
