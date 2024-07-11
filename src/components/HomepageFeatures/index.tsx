@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import TestMui from '../TestMui';
 
 type FeatureItem = {
   title: string;
@@ -55,7 +54,6 @@ export default function HomepageFeatures(): JSX.Element {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-          <TestMui />
         </div>
       </div>
     </section>
