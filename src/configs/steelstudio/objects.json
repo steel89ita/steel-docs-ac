@@ -1,0 +1,4 @@
+[
+  { "meshNames": ["MESHES1?"], "name": "Meshes 1", "enabled": true },
+  { "meshNames": ["MESHES2?"], "name": "Meshes 2", "enabled": true }
+]

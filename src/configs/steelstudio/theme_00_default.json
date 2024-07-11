@@ -1,0 +1,8 @@
+{
+  "theme": "Default",
+  "backgrounds": [
+    { "color": "0.9, 0.8, 0.7, 1", "texture": "txDetail", "meshNames": ["MESH1", "MESH2"], "label": "Color Palette 1" },
+    { "color": "0.8, 0.5, 0.4, 1", "texture": "txDetail", "meshNames": ["MESH3"], "label": "Color Palette 2" },
+    { "color": "0.8, 0.8, 0.9, 1", "texture": "txDetail", "meshNames": ["MESH4"], "label": "Color Palette 3" }
+  ]
+}
