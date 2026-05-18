@@ -1,0 +1,125 @@
+---
+sidebar_position: 5
+title: Cameras
+description: Cameras tab of Steel Studio — fixed shots and animated paths
+---
+
+# Cameras
+
+The Cameras tab lets you **save, replay, and animate** camera views. It has two sub-tabs:
+
+- **Fixed** — single static camera shots you can snap to instantly
+- **Paths** — keyframed camera paths that play back as smooth animated sequences
+
+All cameras are saved to `cameras.json` in `[track_folder]/extension/steelstudio/`.
+
+---
+
+## Fixed Cameras
+
+A fixed camera stores a single position, orientation, FOV, and DOF setting.
+
+### Capturing a shot
+
+1. Position the camera in the game view as desired.
+2. Type a name in the input field and click **Capture**.
+
+The new shot appears in the tile grid as a thumbnail.
+
+### Using a fixed camera
+
+Click any tile to **snap** to that camera view immediately. Steel Studio takes control of the camera (you will see the camera grabbed indicator).
+
+### Editing a fixed camera
+
+Hover a tile and click the **edit icon** to open the editor. While editing:
+
+- Use the **nudge controls** in the right panel to fine-tune the view (see [Right-panel controls](#right-panel-controls) below).
+- Click **Save** to persist the updated position.
+
+---
+
+## Path Cameras
+
+A path camera is a sequence of **keyframes**. Steel Studio interpolates between them to produce a smooth animated camera move.
+
+### Recording a path
+
+1. Move to your first camera position and click **Add Keyframe**.
+2. Move to subsequent positions and keep clicking **Add Keyframe** (at least 2 are required).
+3. Enter a name, then click **Save Path**.
+
+### Playback controls
+
+| Control | Description |
+|---|---|
+| **Play / Pause** | Start or pause playback at the current time |
+| **Stop** | Halt playback and return to time 0 |
+| **Loop** | Restart the path automatically when it reaches the end |
+| **Autoplay** | Cycle through all saved path cameras in sequence, looping endlessly |
+| **Step slider** | Controls how much time (0.05–2.0 s) each playback step advances |
+
+### Path settings
+
+| Setting | Description |
+|---|---|
+| **Duration** | Total length of the path in seconds (1–60) |
+| **Interpolation** | `linear` — straight lines between keyframes; `smooth` — Catmull-Rom spline (curved) |
+| **Easing** | `linear`, `easeIn`, `easeOut`, or `easeInOut` — controls how the playhead accelerates |
+
+### Timeline
+
+Below the playback controls, a **timeline bar** shows:
+
+- Diamond markers at each keyframe position
+- A red cursor indicating the current playback time
+
+Click the timeline to jump to a time. Use the **< KF** and **KF >** buttons to jump between keyframes.
+
+### Editing keyframes
+
+While a path is open for editing:
+
+| Action | Description |
+|---|---|
+| **Navigate with < KF / KF >** | Jump to the previous or next keyframe |
+| **Update KF** | Overwrite the selected keyframe with the current camera view |
+| **Delete KF** | Remove the selected keyframe (minimum 2 required) |
+
+:::info
+Pressing **F1–F7** releases Steel Studio's camera grab. For path editing, this drops the live camera but keeps the editing overlay active — you can continue adjusting keyframes using the nudge controls without holding the camera (F7 mode).
+:::
+
+---
+
+## Right-panel controls
+
+These controls appear whenever a camera is grabbed (fixed or path edit mode).
+
+### Rotation
+
+Buttons to nudge the camera angle by the configured step:
+
+- **Pitch** — tilt up / down
+- **Yaw** — pan left / right
+- **Roll** — rotate around the forward axis
+
+### Position
+
+- **Elevate** — move up / down
+- **Strafe** — move left / right
+- **Move** — move forward / backward
+
+### Field of view
+
+Increase or decrease the FOV in increments of the configured step.
+
+### Depth of field
+
+| Control | Description |
+|---|---|
+| **DOF toggle** | Enable or disable depth of field |
+| **Focus distance** | Distance to the focal plane (0–500 m) |
+| **CTRL+click** | Click anywhere in the scene to set the focus distance to that point's depth |
+
+DOF relies on the YEBIS post-processing effect being active. The aperture (f-stop) is set globally by the active PP filter and cannot be changed from Steel Studio.

@@ -1,0 +1,43 @@
+{
+  "name": "My Light Set",
+  "lights": [
+    {
+      "name": "Main Light",
+      "enabled": true,
+      "posX": 0,
+      "posY": 3,
+      "posZ": 0,
+      "dirX": 0,
+      "dirY": -1,
+      "dirZ": 0,
+      "spot": 0,
+      "spotSharpness": 0.5,
+      "colorStops": [
+        { "r": 1, "g": 1, "b": 1 }
+      ],
+      "intensity": 5,
+      "holdTime": 1,
+      "transitionTime": 1,
+      "range": 20,
+      "volumetricLight": false,
+      "fadeAt": 500,
+      "fadeSmooth": 200,
+      "shadows": false,
+      "shadowsStatic": false,
+      "shadowsHalfRes": false,
+      "shadowsExtraBlur": false,
+      "specularMultiplier": 1,
+      "diffuseConcentration": 0,
+      "rangeGradientOffset": 0,
+      "affectsCars": true,
+      "showInReflections": false,
+      "skipLightMap": false,
+      "meshes": "",
+      "materials": "",
+      "emissiveEnabled": false,
+      "emissiveMeshes": "",
+      "emissiveMaterials": "",
+      "emissiveIntensity": 1
+    }
+  ]
+}

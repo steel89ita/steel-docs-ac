@@ -1,20 +1,44 @@
 ---
 sidebar_position: 3
-title: Backgrounds
-description: Backgrounds tab of Steel Studio
+title: Color Palettes
+description: Editing material colors inside the Themes editor
 ---
 import VideoPlayer from '@site/src/components/VideoPlayer'
 import videoThemeSelection from './video/background_colors.mp4';
 
-# Backgrounds
+# Color Palettes
 
-The Backgrounds tab in Steel Studio allows you to choose a color for every defined materials in the showroom. 
-Every showroom can have a set of customizable backgrounds, so you are free to choose the color you want.
+Color palettes are the building blocks of a theme. Each palette controls the color of one or more showroom meshes (materials). You edit them inside the **Themes editor** — open a theme to edit, then scroll down to the palette list.
 
-#### Here you can:
+### Changing a color
 
-- Click on a **Color Palette** and change hue, saturation, lightness, or specify RGB/HSL/HEX colors.
-- Click the button **Shuffle Palette** to pick random colors for every palette
-- ~~Add a new color controller~~ <mark>Not available, under development</mark>
+Click any **color swatch** to open the color picker. You can adjust the color by:
+
+- Dragging the hue, saturation, and brightness sliders
+- Entering RGB, HSL, or HEX values directly
+- Choosing between a **Hue Wheel** or **Hue Bar** color picker style (saved in settings)
+
+The scene updates in real time as you drag.
+
+### Shuffle Palette
+
+Click **Shuffle Palette** to generate a new random color combination across all palettes at once. You can choose from six generation modes:
+
+| Mode | Description |
+|---|---|
+| **Random** | Picks saturated colors spread across the hue wheel |
+| **Monochromatic** | One base hue, varied in saturation and brightness |
+| **Analogous** | Hues within ±30° of the base color |
+| **Complementary** | Alternates between the base hue and its opposite (180°) |
+| **Split Complementary** | Base hue plus the two neighbors of its complement |
+| **Triadic** | Three hues evenly spaced 120° apart |
+
+### HSV Adjustments
+
+Use the **Hue**, **Saturation**, and **Value** sliders to shift those properties across all palettes simultaneously. This is useful for quickly warming, cooling, or brightening the entire scene without changing individual colors.
+
+### How palettes are defined
+
+Each palette entry targets one or more meshes in the scene and a specific texture slot (e.g. `txDiffuse`, `txDetail`). The track author defines which meshes each palette controls — see [Theme Config](./track-configs/advanced_themes) for the full file format.
 
 <VideoPlayer url={videoThemeSelection} />

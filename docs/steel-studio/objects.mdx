@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 title: Objects
 description: Objects tab of Steel Studio
 ---
@@ -8,13 +8,13 @@ import videoThemeSelection from './video/objects_control.mp4';
 
 # Objects
 
-The Objects tab in Steel Studio allows you to hide and show defined objects in the track. \
-This is a quick way to show and hide them without the need to restart the game.
+The Objects tab lets you show or hide groups of track meshes without restarting the game. Each entry in the list is defined by the track author in the extension config (see [Objects Config](./track-configs/advanced_objects) for how to set it up).
 
-#### Here you can:
+### Here you can:
 
-- Select which defined object to show or hide
-- Save Objects to save the changes. When you restart the game and open Steel Studio you will restore the visibility as it was saved.
-- Your objects are saved in the ```[track_folder]/extension/steelstudio/objects.json```, so you can share them with anyone.
+- **Toggle visibility** of each defined object using its checkbox.
+- **Save Objects** to persist the current visibility state. The next time you open Steel Studio, all objects will be restored to the saved state.
+
+Your objects configuration is saved in `[track_folder]/extension/steelstudio/objects.json` and can be shared with others.
 
 <VideoPlayer url={videoThemeSelection} />

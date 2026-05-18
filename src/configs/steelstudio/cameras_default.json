@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Shot 1",
+    "type": "fixed",
+    "keyframes": [
+      {
+        "t": 0,
+        "position": "(0.0, 1.0, 5.0)",
+        "look": "(0.0, 0.0, -1.0)",
+        "up": "(0.0, 1.0, 0.0)",
+        "side": "(1.0, 0.0, 0.0)",
+        "fov": 60.0,
+        "dofEnabled": false,
+        "dofDistance": 5.0
+      }
+    ]
+  },
+  {
+    "name": "Path 1",
+    "type": "path",
+    "duration": 10,
+    "interp": "smooth",
+    "ease": "easeInOut",
+    "keyframes": [
+      {
+        "t": 0,
+        "position": "(0.0, 1.0, 5.0)",
+        "look": "(0.0, 0.0, -1.0)",
+        "up": "(0.0, 1.0, 0.0)",
+        "side": "(1.0, 0.0, 0.0)",
+        "fov": 60.0,
+        "dofEnabled": false,
+        "dofDistance": 5.0
+      },
+      {
+        "t": 1,
+        "position": "(3.0, 1.0, 0.0)",
+        "look": "(-0.8, 0.0, -0.6)",
+        "up": "(0.0, 1.0, 0.0)",
+        "side": "(0.6, 0.0, -0.8)",
+        "fov": 45.0,
+        "dofEnabled": true,
+        "dofDistance": 3.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+---
+title: LightSet Config
+description: Configuration reference for LightSet JSON files
+sidebar_position: 2
+---
+
+import LightSetTemplate from '!!raw-loader!@site/src/configs/steelstudio/lightset_00_default.json';
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+
+export const lightSetProperties = [
+    { name: 'name', desc: 'Display name of the LightSet shown in the tile grid', vals: 'String' },
+    { name: 'lights', desc: 'Array of light objects in this set', vals: 'Array' },
+]
+
+export const lightProperties = [
+    { name: 'name', desc: 'Label for this light shown in the editor', vals: 'String' },
+    { name: 'enabled', desc: 'Whether this light is active when the LightSet is applied', vals: 'true | false' },
+    { name: 'posX / posY / posZ', desc: 'Position offset of the light in world space', vals: 'Number (−500 to 500)' },
+    { name: 'dirX / dirY / dirZ', desc: 'Direction vector for spotlights', vals: 'Number' },
+    { name: 'spot', desc: 'Spotlight cone angle in degrees (0 = point light)', vals: 'Number (0–175)' },
+    { name: 'spotSharpness', desc: 'Hardness of the spotlight cone edge', vals: 'Number (0–1)' },
+    { name: 'colorStops', desc: 'Array of color stops for single color or animated gradient', vals: 'Array of { r, g, b }' },
+    { name: 'intensity', desc: 'Light brightness multiplier', vals: 'Number (0.1–50)' },
+    { name: 'holdTime', desc: 'Seconds to stay at each color stop before transitioning', vals: 'Number' },
+    { name: 'transitionTime', desc: 'Seconds to blend from one color stop to the next', vals: 'Number' },
+    { name: 'range', desc: 'Maximum illumination radius in metres', vals: 'Number (0.1–500)' },
+    { name: 'volumetricLight', desc: 'Enable volumetric (fog/haze) rendering for this light', vals: 'true | false' },
+    { name: 'fadeAt', desc: 'Distance at which the light begins to fade', vals: 'Number' },
+    { name: 'fadeSmooth', desc: 'Fade transition width', vals: 'Number' },
+    { name: 'shadows', desc: 'Enable real-time shadows', vals: 'true | false' },
+    { name: 'shadowsStatic', desc: 'Cast shadows only against static geometry', vals: 'true | false' },
+    { name: 'shadowsHalfRes', desc: 'Render shadow map at half resolution', vals: 'true | false' },
+    { name: 'shadowsExtraBlur', desc: 'Apply extra softening to shadow edges', vals: 'true | false' },
+    { name: 'specularMultiplier', desc: 'Strength of specular highlights', vals: 'Number (0–5)' },
+    { name: 'diffuseConcentration', desc: 'Focuses diffuse illumination toward the light center', vals: 'Number (0–1)' },
+    { name: 'rangeGradientOffset', desc: 'Adjusts how brightness falls off across the range', vals: 'Number (0–1)' },
+    { name: 'affectsCars', desc: 'Whether the light illuminates car models', vals: 'true | false' },
+    { name: 'showInReflections', desc: 'Whether the light appears in reflection surfaces', vals: 'true | false' },
+    { name: 'skipLightMap', desc: 'Exclude this light from lightmap calculations', vals: 'true | false' },
+    { name: 'meshes', desc: 'Comma-separated mesh names to attach this light to', vals: 'String' },
+    { name: 'materials', desc: 'Material string for material-only lights', vals: 'String' },
+    { name: 'emissiveEnabled', desc: 'Drive a mesh ksEmissive property in sync with this light', vals: 'true | false' },
+    { name: 'emissiveMeshes', desc: 'Mesh names to apply emissive control to', vals: 'String' },
+    { name: 'emissiveMaterials', desc: 'Material names to apply emissive control to', vals: 'String' },
+    { name: 'emissiveIntensity', desc: 'Emissive brightness override', vals: 'Number (0–10)' },
+]
+
+# LightSet Config
+
+:::warning
+LightSet files are saved automatically by the Steel Studio app. You do not need to create or edit them manually.\
+**Use this page as a reference only**, or if you want to hand-craft a LightSet to ship with a track.
+:::
+
+LightSet files are stored as `lightset_[name].json` in `[track_folder]/extension/steelstudio/`.
+
+### How to use a LightSet with a track
+
+1. Create a `lightset_[name].json` file based on the template below and place it in `[track_folder]/extension/steelstudio/`.
+2. Open Steel Studio. The LightSet will appear in the tile grid automatically.
+3. Click its tile to activate it.
+
+### Config file
+
+<StCodeBlock title={'extension/steelstudio/lightset_00_default.json'} language={'json'}>
+    {LightSetTemplate}
+</StCodeBlock>
+
+### LightSet properties
+
+<PropsTable rows={lightSetProperties} />
+
+### Light properties
+
+<PropsTable rows={lightProperties} />
+
+### Color stops
+
+Each entry in `colorStops` is an object with three fields:
+
+| Field | Description | Values |
+|---|---|---|
+| `r` | Red channel | 0–1 |
+| `g` | Green channel | 0–1 |
+| `b` | Blue channel | 0–1 |
+
+A single color stop produces a static light. Two or more stops produce an animated gradient. The animation cycles through stops using the `holdTime` and `transitionTime` values defined on the parent light.
+
+:::info
+`holdTime` and `transitionTime` are shared across **all lights** in a LightSet, keeping them synchronized.
+:::

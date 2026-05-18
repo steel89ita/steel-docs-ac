@@ -1,0 +1,116 @@
+---
+sidebar_position: 4
+title: LightSets
+description: LightSets tab of Steel Studio — dynamic lighting with animated colors
+---
+
+# LightSets
+
+The LightSets tab lets you create and manage **named collections of dynamic lights** for your showroom or track. Each LightSet can contain multiple lights with full control over position, color, intensity, shadows, and animated color gradients. Activate a LightSet to apply it instantly to the scene — the lights animate in real time even when the Steel Studio window is hidden.
+
+:::info
+LightSet files are saved as `lightset_[name].json` in `[track_folder]/extension/steelstudio/`.
+:::
+
+---
+
+### The tile grid
+
+The main view shows all saved LightSets as thumbnail tiles. Click a tile to **activate** that LightSet. Hover a tile to reveal the **edit** and **delete** icons.
+
+To create a new LightSet, click the **+** tile and give it a name.
+
+---
+
+### The editor
+
+Opening a LightSet puts you into the editor, where you manage its lights. Each light is shown as a collapsible **card**. Use the **Add Light** button to add a new light to the set.
+
+The editor header has **Save**, **Save as…**, and **Cancel** buttons. Cancelling reverts to the last saved state.
+
+---
+
+### Per-light properties
+
+#### Position and direction
+
+| Control | Description |
+|---|---|
+| **Position X / Y / Z** | Offset of the light in world space (−500 to 500) |
+| **Direction X / Y / Z** | Direction the spotlight faces |
+| **Spot Angle** | Cone angle of the spotlight (0–175°) |
+| **Spot Sharpness** | How hard the cone edge is (0 = soft, 1 = sharp) |
+
+#### Color and intensity
+
+Each light can have a **single color** or an animated **color gradient**.
+
+- **Single color** — pick a color and set the intensity (0.1–50.0).
+- **Gradient** — add up to 6 color stops. The light cycles through them automatically using:
+  - **Hold time** — seconds to stay at each color before transitioning
+  - **Transition time** — seconds to blend into the next color
+
+  Hold and transition times are shared across all lights in the set, so all lights stay in sync.
+
+#### Range and volume
+
+| Control | Description |
+|---|---|
+| **Range** | Maximum light radius (0.1–500 m) |
+| **Volumetric** | Enables the volumetric (fog/haze) light effect |
+| **Fade distance** | Distance at which the light begins to fade |
+| **Fade smoothness** | How gradually the fade happens |
+
+#### Render properties
+
+| Control | Description |
+|---|---|
+| **Specular multiplier** | Strength of specular highlights (0–5) |
+| **Diffuse concentration** | Focuses diffuse light toward the center (0–1) |
+| **Range gradient offset** | Adjusts how intensity falls off across range (0–1) |
+| **Affects cars** | Whether the light illuminates car models (default: on) |
+| **Show in reflections** | Whether the light appears in mirror/reflection surfaces |
+| **Skip lightmap** | Excludes the light from baked lightmap calculations |
+
+#### Shadows
+
+| Control | Description |
+|---|---|
+| **Shadows** | Enable real-time shadows for this light |
+| **Static shadows** | Bake shadows against static geometry only |
+| **Half-resolution** | Render shadow map at half resolution (better performance) |
+| **Extra blur** | Apply additional softening to shadow edges |
+
+#### Emissive (ksEmissive) control
+
+Enable **Emissive** to link a mesh's `ksEmissive` material property to this light. This makes the mesh glow in sync with the light's animated color — useful for making light fixtures visually emit the same color the light source projects.
+
+| Control | Description |
+|---|---|
+| **Enabled** | Toggle emissive control on/off |
+| **Override intensity** | Custom emissive brightness (0–10) |
+| **Meshes / Material** | Which mesh or material to drive emissive on |
+
+#### Mesh targeting
+
+| Control | Description |
+|---|---|
+| **Meshes** | Comma-separated list of mesh names to attach the light to |
+| **Material** | Material string for material-only lights |
+| **Mesh picker** | Click the picker icon, then click a mesh in the scene to select it |
+
+---
+
+### Copy and paste
+
+Each light card has a **Copy** button that copies its properties (intensity, range, shadows, render settings). Click **Paste** on another light to apply those values. Useful for quickly cloning a light's style without copying its position or color.
+
+---
+
+### INI light conversion
+
+If the track has legacy `[LIGHT_x]` sections in its `track.ini` extension config, Steel Studio shows a warning banner in the LightSets tab. Click **Convert** to import all those lights into a new LightSet automatically.
+
+:::warning
+Before converting, Steel Studio creates a backup of your `extension/lights.ini` file as `lights.ini.steelstudio.bak`. Keep this backup until you have verified the converted LightSet looks correct.
+:::

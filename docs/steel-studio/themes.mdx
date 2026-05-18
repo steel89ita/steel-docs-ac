@@ -8,14 +8,24 @@ import videoThemeSelection from './video/themes_selection.mp4';
 
 # Themes
 
-The Themes tab in Steel Studio allows you to configure and save distinct theme palettes for each showroom. 
-By selecting or creating a theme, you can instantly change the textures and colors in your showroom to match your desired aesthetic. 
-This feature provides a seamless way to customize the visual appeal of your scenes, ensuring every photo shot is uniquely styled to perfection.
+The Themes tab is the starting point for showroom customization. A **theme** is a named preset that stores all the material colors for a scene. You can save as many themes as you like and switch between them instantly.
 
-#### Here you can:
+Each theme is displayed as a **thumbnail tile** that shows a screenshot of the scene when that theme was saved, making it easy to recognize your presets at a glance.
 
-- Choose a saved palette or delete it.
-- Insert a name in the _input box_ and **Save current theme** to save your chosen **background colors** and use again later.
-- Your themes are saved in the ```[track_folder]/extension/steelstudio/theme_[name].json```, so you can share them with anyone.
+### How it works
+
+1. **Select a theme** — click its tile to apply it immediately. The scene colors update in real time.
+2. **Create a theme** — click the **+** tile, give it a name, and configure the colors in the editor.
+3. **Edit a theme** — hover a tile and click the **edit icon** to open the editor.
+4. **Save changes** — use the **Save**, **Save as…**, or **Cancel** buttons in the editor header.
+5. **Delete a theme** — hover a tile and click the **delete icon**, then confirm.
+
+### Inside the editor
+
+When editing a theme, you configure its **color palettes** — each palette controls the color of one or more showroom meshes (materials). See the [Color Palettes](./backgrounds) page for the full palette editing reference.
+
+:::info
+Themes are saved as JSON files in `[track_folder]/extension/steelstudio/theme_[name].json`. You can share them with other users or copy them to different tracks.
+:::
 
 <VideoPlayer url={videoThemeSelection} />

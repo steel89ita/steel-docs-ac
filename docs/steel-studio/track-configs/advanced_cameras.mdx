@@ -1,0 +1,64 @@
+---
+title: Cameras Config
+description: Configuration reference for the cameras JSON file
+sidebar_position: 3
+---
+
+import CamerasTemplate from '!!raw-loader!@site/src/configs/steelstudio/cameras_default.json';
+import StCodeBlock from '@site/src/components/StCodeBlock'
+import PropsTable from '@site/src/components/PropsTable'
+
+export const cameraProperties = [
+    { name: 'name', desc: 'Display name of the camera shown in the tile grid', vals: 'String' },
+    { name: 'type', desc: 'Camera type', vals: '"fixed" | "path"' },
+    { name: 'keyframes', desc: 'Array containing the camera keyframes (one for fixed, two or more for path)', vals: 'Array' },
+    { name: 'duration', desc: 'Path playback duration in seconds (path only)', vals: 'Number (1–60)' },
+    { name: 'interp', desc: 'Position interpolation method (path only)', vals: '"linear" | "smooth"' },
+    { name: 'ease', desc: 'Easing function applied to the playback timeline (path only)', vals: '"linear" | "easeIn" | "easeOut" | "easeInOut"' },
+]
+
+export const keyframeProperties = [
+    { name: 't', desc: 'Normalized time of this keyframe along the path (0 = start, 1 = end)', vals: 'Number (0–1)' },
+    { name: 'position', desc: 'Camera position in world space, as a vec3 string', vals: 'String "(x, y, z)"' },
+    { name: 'look', desc: 'Forward direction vector', vals: 'String "(x, y, z)"' },
+    { name: 'up', desc: 'Up direction vector', vals: 'String "(x, y, z)"' },
+    { name: 'side', desc: 'Right direction vector (derived from look and up)', vals: 'String "(x, y, z)"' },
+    { name: 'fov', desc: 'Vertical field of view in degrees', vals: 'Number (5–120)' },
+    { name: 'dofEnabled', desc: 'Whether depth of field is active at this keyframe', vals: 'true | false' },
+    { name: 'dofDistance', desc: 'Focus distance in metres', vals: 'Number (0–500)' },
+]
+
+# Cameras Config
+
+:::warning
+The cameras file is saved automatically by the Steel Studio app. You do not need to create or edit it manually.\
+**Use this page as a reference only.**
+:::
+
+All cameras are stored in a single file: `[track_folder]/extension/steelstudio/cameras.json`.
+
+The file is a JSON array where each entry is either a **fixed camera** (one keyframe) or a **path camera** (two or more keyframes).
+
+### Config file
+
+<StCodeBlock title={'extension/steelstudio/cameras.json'} language={'json'}>
+    {CamerasTemplate}
+</StCodeBlock>
+
+### Camera properties
+
+<PropsTable rows={cameraProperties} />
+
+### Keyframe properties
+
+Both fixed and path cameras use the same keyframe structure.
+
+<PropsTable rows={keyframeProperties} />
+
+:::info
+For a **fixed** camera, only the first keyframe is used (set `t` to `0`).
+
+For a **path** camera, keyframes are sorted by their `t` value and interpolated based on the `interp` setting:
+- `"linear"` — straight lines between positions
+- `"smooth"` — Catmull-Rom spline (curved, natural motion)
+:::

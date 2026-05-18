@@ -1,7 +1,7 @@
 ---
 title: Locations Config
 description: Configuration of the Locations file
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 {/* Ext Config INI parts */}
@@ -16,25 +16,16 @@ export const locationsProperties = [
     { name: 'name', desc: 'Label of the button of the location seen in the app', vals: 'String' }
 ]
 
-export const backgroundsProperties = [
-    { name: 'color', desc: 'RGBA colors, comma separated', vals: '0-1, 0-1, 0-1, 0-1' },
-    { name: 'texture', desc: 'Texture type (role) to replace', vals: 'String ( txDiffuse | txDetail | ... )' },
-    { name: 'meshNames', desc: 'Array containing one or more meshes with the material to replace the texture', vals: 'Array of Strings' },
-    { name: 'label', desc: 'Name of the palette shown in Steel Studio', vals: 'String' },
-]
-
 # Locations Config
 
-
 :::warning
-This file can be saved from the Teleport tab. You don't need to configure it manually.\
-**Just use this as a reference or if you need to change the location name.**
+This file is saved from the Teleport tab. You do not need to configure it manually.\
+**Use this as a reference or if you need to rename a saved location.**
 :::
-
 
 ### Config file properties
 
-<StCodeBlock title={'extension/steelstudio/locations.json'} language={'json'} >
+<StCodeBlock title={'extension/steelstudio/locations.json'} language={'json'}>
     {LocationsTemplate}
 </StCodeBlock>
 
