@@ -4,7 +4,7 @@ title: Color Palettes
 description: Editing material colors inside the Themes editor
 ---
 import VideoPlayer from '@site/src/components/VideoPlayer'
-import videoThemeSelection from './video/background_colors.mp4';
+import videoThemeCustomization from './video/themes_customization.mp4';
 
 # Color Palettes
 
@@ -19,6 +19,8 @@ Click any **color swatch** to open the color picker. You can adjust the color by
 - Choosing between a **Hue Wheel** or **Hue Bar** color picker style (saved in settings)
 
 The scene updates in real time as you drag.
+
+<VideoPlayer url={videoThemeCustomization} />
 
 ### Shuffle Palette
 
@@ -41,4 +43,4 @@ Use the **Hue**, **Saturation**, and **Value** sliders to shift those properties
 
 Each palette entry targets one or more meshes in the scene and a specific texture slot (e.g. `txDiffuse`, `txDetail`). The track author defines which meshes each palette controls — see [Theme Config](./track-configs/advanced_themes) for the full file format.
 
-<VideoPlayer url={videoThemeSelection} />
+

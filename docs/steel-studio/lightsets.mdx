@@ -3,6 +3,10 @@ sidebar_position: 4
 title: LightSets
 description: LightSets tab of Steel Studio — dynamic lighting with animated colors
 ---
+import VideoPlayer from '@site/src/components/VideoPlayer'
+import videoLightsetSelection from './video/lightset_selection.mp4';
+import videoLightsetCustomization1 from './video/lightset_customization1.mp4';
+import videoLightsetCustomization2 from './video/lightset_customization2.mp4';
 
 # LightSets
 
@@ -18,7 +22,9 @@ LightSet files are saved as `lightset_[name].json` in `[track_folder]/extension/
 
 The main view shows all saved LightSets as thumbnail tiles. Click a tile to **activate** that LightSet. Hover a tile to reveal the **edit** and **delete** icons.
 
-To create a new LightSet, click the **+** tile and give it a name.
+To create a new LightSet, click the **+** tile or **New Lightset** and give it a name.
+
+<VideoPlayer url={videoLightsetSelection} />
 
 ---
 
@@ -29,6 +35,8 @@ Opening a LightSet puts you into the editor, where you manage its lights. Each l
 The editor header has **Save**, **Save as…**, and **Cancel** buttons. Cancelling reverts to the last saved state.
 
 ---
+
+<VideoPlayer url={videoLightsetCustomization1} />
 
 ### Per-light properties
 
@@ -106,6 +114,8 @@ Enable **Emissive** to link a mesh's `ksEmissive` material property to this ligh
 Each light card has a **Copy** button that copies its properties (intensity, range, shadows, render settings). Click **Paste** on another light to apply those values. Useful for quickly cloning a light's style without copying its position or color.
 
 ---
+
+<VideoPlayer url={videoLightsetCustomization2} />
 
 ### INI light conversion
 

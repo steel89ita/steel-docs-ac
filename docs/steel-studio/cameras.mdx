@@ -3,6 +3,9 @@ sidebar_position: 5
 title: Cameras
 description: Cameras tab of Steel Studio — fixed shots and animated paths
 ---
+import VideoPlayer from '@site/src/components/VideoPlayer'
+import videoCameraSelection from './video/cameras_selection.mp4';
+import videoCameraPathCapture from './video/cameras_path_capture.mp4';
 
 # Cameras
 
@@ -12,6 +15,8 @@ The Cameras tab lets you **save, replay, and animate** camera views. It has two 
 - **Paths** — keyframed camera paths that play back as smooth animated sequences
 
 All cameras are saved to `cameras.json` in `[track_folder]/extension/steelstudio/`.
+
+<VideoPlayer url={videoCameraSelection} />
 
 ---
 
@@ -75,6 +80,8 @@ Below the playback controls, a **timeline bar** shows:
 - A red cursor indicating the current playback time
 
 Click the timeline to jump to a time. Use the **< KF** and **KF >** buttons to jump between keyframes.
+
+<VideoPlayer url={videoCameraPathCapture} />
 
 ### Editing keyframes
 

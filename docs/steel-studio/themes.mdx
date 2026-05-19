@@ -5,12 +5,15 @@ description: Themes tab of Steel Studio
 ---
 import VideoPlayer from '@site/src/components/VideoPlayer'
 import videoThemeSelection from './video/themes_selection.mp4';
+import videoThemeCustomization from './video/themes_customization.mp4';
 
 # Themes
 
 The Themes tab is the starting point for showroom customization. A **theme** is a named preset that stores all the material colors for a scene. You can save as many themes as you like and switch between them instantly.
 
 Each theme is displayed as a **thumbnail tile** that shows a screenshot of the scene when that theme was saved, making it easy to recognize your presets at a glance.
+
+<VideoPlayer url={videoThemeSelection} />
 
 ### How it works
 
@@ -28,4 +31,4 @@ When editing a theme, you configure its **color palettes** — each palette cont
 Themes are saved as JSON files in `[track_folder]/extension/steelstudio/theme_[name].json`. You can share them with other users or copy them to different tracks.
 :::
 
-<VideoPlayer url={videoThemeSelection} />
+
